@@ -1,10 +1,8 @@
 package vn.edu.iuh.fit.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import vn.edu.iuh.fit.models.OrderDetail;
 import vn.edu.iuh.fit.services.OrderDetailService;
 
 @RestController
@@ -13,6 +11,12 @@ import vn.edu.iuh.fit.services.OrderDetailService;
 public class OrderDetailController {
     @Autowired
     private OrderDetailService orderDetailService;
+
+    @PostMapping
+    public boolean create(@RequestBody OrderDetail orderDetail){
+        orderDetailService.create(orderDetail);
+        return orderDetailService.create(orderDetail) != null;
+    }
 
     @GetMapping("/current-order-detail-id")
     public long getCurrentOrderDetailID(){

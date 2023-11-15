@@ -2,6 +2,7 @@ package vn.edu.iuh.fit.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import vn.edu.iuh.fit.entity.Login;
 import vn.edu.iuh.fit.models.Account;
 import vn.edu.iuh.fit.services.AccountService;
 
@@ -15,6 +16,12 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
+    @PutMapping
+    public boolean update(@RequestBody Account account){
+        System.out.println(account);
+        return accountService.update(account) != null;
+    }
+
     @GetMapping
     public List<Account> findAll(){
         return accountService.findAll();
@@ -24,6 +31,11 @@ public class AccountController {
     public Account findByID(@PathVariable("id") long id){
         Optional<Account> account = accountService.findByID(id);
         return account.orElse(null);
+    }
+
+    @PostMapping("/login")
+    public Account login(@RequestBody Login login){
+        return accountService.login(login).orElse(null);
     }
 
     @GetMapping("/current-account-id")

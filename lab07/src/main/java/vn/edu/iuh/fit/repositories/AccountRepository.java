@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Account, Long> {
-
+    public Optional<Account> findByEmailAndPassword(String email, String password);
     public Optional<Account> findByEmail(String email);
     @Query("select a.accountId from Account a order by a.accountId desc limit 1")
     public long getCurrentAccountID();
