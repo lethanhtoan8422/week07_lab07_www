@@ -15,3 +15,7 @@
 ![Ảnh9](https://github.com/lethanhtoan8422/week07_lab07_www/assets/144576370/21f939f9-8c88-4a05-be43-a2453936ab55)\
 7/ Chọn Đơn Hàng Đã Đặt :\
 ![Ảnh10](https://github.com/lethanhtoan8422/week07_lab07_www/assets/144576370/0d936b00-6a54-4ba9-b747-6287b855fa71)\
+8/ Thống kê order theo ngày, theo khoảng thời gian :\
+![Ảnh1](https://github.com/lethanhtoan8422/week07_lab07_www/assets/144576370/2042204f-caa6-4314-8307-703bc5c4d91c)\
+9/ Thống kê order theo nhân viên bán hàng trong 1 khoảng thời gian :\
+![Ảnh2](https://github.com/lethanhtoan8422/week07_lab07_www/assets/144576370/73437ee7-3b4a-4fd1-8326-65d073405be1)
