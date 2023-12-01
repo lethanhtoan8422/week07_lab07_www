@@ -43,7 +43,9 @@ const Cart = () => {
         </button>
       {productsChosen.map((pro) => (
         <div className="content-cart" key={pro.product_id}>
-          <img src={`/${pro.path}`} alt="" className="image-product-chosen" />
+          <img src={`/${pro.path}`} alt="" className="image-product-chosen" 
+          style={{width : '180px', height : '200px'}}
+          />
           <div className="infor">
             <span className="name-product-chosen">{pro.name}</span>
             <span className="price-product-chosen">
@@ -74,7 +76,6 @@ const Cart = () => {
         <button className="btn-payment" onClick={() => navigate("/payment", {
             state: {
                 productsChosen: productsChosen,
-                // total: total,
                 customer : customer
               }
         })}>Thanh Toán</button>

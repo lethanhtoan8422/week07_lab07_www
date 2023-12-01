@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import vn.edu.iuh.fit.entity.Login;
 import vn.edu.iuh.fit.models.Account;
+import vn.edu.iuh.fit.repositories.AccountRepository;
 import vn.edu.iuh.fit.services.AccountService;
 
 import java.util.List;
@@ -15,6 +16,9 @@ import java.util.Optional;
 public class AccountController {
     @Autowired
     private AccountService accountService;
+
+    @Autowired
+    private AccountRepository accountRepository;
 
     @PutMapping
     public boolean update(@RequestBody Account account){

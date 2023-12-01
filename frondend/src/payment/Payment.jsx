@@ -73,7 +73,6 @@ const Payment = () => {
         let dataOrderDetail = await axios.get(
           "http://localhost:8080/order-detail/current-order-detail-id"
         );
-        console.log(dataOrderDetail.data);
         let dataPr = await axios.get(
           `http://localhost:8080/products/${productsChosen[i].productId}`
         );
@@ -178,6 +177,7 @@ const Payment = () => {
                 src={`/${pro.path}`}
                 alt=""
                 className="image-product-chosen"
+                style={{width : '120px', height : '150px'}}
               />
               <div className="infor">
                 <span className="name-product-chosen">{pro.name}</span>
